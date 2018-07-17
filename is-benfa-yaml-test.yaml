@@ -6,8 +6,8 @@ metadata:
   creationTimestamp: null
   generation: 1
   labels:
-    app: oscpdevt1
-  name: oscpdevt1
+    app: benfa-yaml-test
+  name: benfa-yaml-test
 spec:
   lookupPolicy:
     local: false
@@ -15,7 +15,7 @@ spec:
   - annotations: null
     from:
       kind: DockerImage
-      name: docker-registry.default.svc:5000/oscpdevt1/oscpdevt1:latest
+      name: docker-registry.default.svc:5000/benfa-yaml-test/benfa-yaml-test:latest
     generation: null
     importPolicy: {}
     name: latest

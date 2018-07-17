@@ -3,17 +3,17 @@ kind: Route
 metadata:
   creationTimestamp: null
   labels:
-    app: oscpdevt1
-  name: oscpdevt1
+    app: benfa-yaml-test
+  name: benfa-yaml-test
 spec:
-  host: oscpdevt1.webplatformsnonprod.umich.edu
+  host: benfa-yaml-test.webplatformsnonprod.umich.edu
   port:
     targetPort: 8443-tcp
   tls:
     termination: passthrough
   to:
     kind: Service
-    name: oscpdevt1
+    name: benfa-yaml-test
     weight: 100
   wildcardPolicy: None
 status:
@@ -22,6 +22,6 @@ status:
     - lastTransitionTime: 2018-05-23T18:48:29Z
       status: "True"
       type: Admitted
-    host: oscpdevt1.webplatformsnonprod.umich.edu
+    host: benfa-yaml-test.webplatformsnonprod.umich.edu
     routerName: router
     wildcardPolicy: None

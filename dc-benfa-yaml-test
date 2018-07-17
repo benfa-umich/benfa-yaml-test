@@ -8,14 +8,14 @@ items:
     creationTimestamp: null
     generation: 1
     labels:
-      app: oscpdevt1
-    name: oscpdevt1
+      app: benfa-yaml-test
+    name: benfa-yaml-test
   spec:
     replicas: 1
     revisionHistoryLimit: 10
     selector:
-      app: oscpdevt1
-      deploymentconfig: oscpdevt1
+      app: benfa-yaml-test
+      deploymentconfig: benfa-yaml-test
     strategy:
       activeDeadlineSeconds: 21600
       resources: {}
@@ -32,13 +32,13 @@ items:
           openshift.io/generated-by: OpenShiftNewApp
         creationTimestamp: null
         labels:
-          app: oscpdevt1
-          deploymentconfig: oscpdevt1
+          app: benfa-yaml-test
+          deploymentconfig: benfa-yaml-test
       spec:
         containers:
-        - image: docker-registry.default.svc:5000/oscpdevt1/oscpdevt1@sha256:c526311e2ecab1f018f7482025fa848cd40ea11929530e2140939dd21681a57e
+        - image: docker-registry.default.svc:5000/benfa-yaml-test/benfa-yaml-test@sha256:c526311e2ecab1f018f7482025fa848cd40ea11929530e2140939dd21681a57e
           imagePullPolicy: Always
-          name: oscpdevt1
+          name: benfa-yaml-test
           ports:
           - containerPort: 80
             protocol: TCP
@@ -82,11 +82,11 @@ items:
     - imageChangeParams:
         automatic: true
         containerNames:
-        - oscpdevt1
+        - benfa-yaml-test
         from:
           kind: ImageStreamTag
-          name: oscpdevt1:latest
-          namespace: oscpdevt1
+          name: benfa-yaml-test:latest
+          namespace: benfa-yaml-test
       type: ImageChange
   status:
     availableReplicas: 0

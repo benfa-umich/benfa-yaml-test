@@ -5,8 +5,8 @@ metadata:
     openshift.io/generated-by: OpenShiftNewApp
   creationTimestamp: null
   labels:
-    app: oscpdevt1
-  name: oscpdevt1
+    app: benfa-yaml-test
+  name: benfa-yaml-test
 spec:
   ports:
   - name: 80-tcp
@@ -22,8 +22,8 @@ spec:
     protocol: TCP
     targetPort: 8443
   selector:
-    app: oscpdevt1
-    deploymentconfig: oscpdevt1
+    app: benfa-yaml-test
+    deploymentconfig: benfa-yaml-test
   sessionAffinity: None
   type: ClusterIP
 status:
