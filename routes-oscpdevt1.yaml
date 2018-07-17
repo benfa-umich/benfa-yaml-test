@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app: oscpdevt1
+  name: oscpdevt1
+spec:
+  host: oscpdevt1.webplatformsnonprod.umich.edu
+  port:
+    targetPort: 8443-tcp
+  tls:
+    termination: passthrough
+  to:
+    kind: Service
+    name: oscpdevt1
+    weight: 100
+  wildcardPolicy: None
+status:
+  ingress:
+  - conditions:
+    - lastTransitionTime: 2018-05-23T18:48:29Z
+      status: "True"
+      type: Admitted
+    host: oscpdevt1.webplatformsnonprod.umich.edu
+    routerName: router
+    wildcardPolicy: None
