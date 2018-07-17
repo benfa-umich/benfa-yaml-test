@@ -49,13 +49,13 @@ spec:
         terminationMessagePolicy: File
         volumeMounts:
         - mountPath: /secrets/apache2
-          name: volume-d6zxz
+          name: volume-zxz6d
           readOnly: true
         - mountPath: /secrets/ssl
-          name: volume-rhy6o
+          name: volume-o6yhr
           readOnly: true
         - mountPath: /secrets/app
-          name: volume-h5z01
+          name: volume-h5z00
           readOnly: true
       dnsPolicy: ClusterFirst
       restartPolicy: Always
@@ -63,15 +63,15 @@ spec:
       securityContext: {}
       terminationGracePeriodSeconds: 30
       volumes:
-      - name: volume-d6zxz
+      - name: volume-zxz6d
         secret:
           defaultMode: 420
           secretName: apache2
-      - name: volume-rhy6o
+      - name: volume-o6yhr
         secret:
           defaultMode: 420
           secretName: ssl
-      - name: volume-h5z01
+      - name: volume-h5z00
         secret:
           defaultMode: 420
           secretName: app
