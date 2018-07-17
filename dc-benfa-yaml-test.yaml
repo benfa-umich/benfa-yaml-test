@@ -38,8 +38,8 @@ spec:
         imagePullPolicy: Always
         name: benfa-yaml-test
         ports:
-        - containerPort: 80
-          protocol: TCP
+#        - containerPort: 80
+#          protocol: TCP
         - containerPort: 8080
           protocol: TCP
         - containerPort: 8443
@@ -49,13 +49,13 @@ spec:
         terminationMessagePolicy: File
         volumeMounts:
         - mountPath: /secrets/apache2
-          name: volume-zxz6d
+          name: volume-d6zxz
           readOnly: true
         - mountPath: /secrets/ssl
-          name: volume-o6yhr
+          name: volume-rhy6o
           readOnly: true
         - mountPath: /secrets/app
-          name: volume-h5z00
+          name: volume-h5z01
           readOnly: true
       dnsPolicy: ClusterFirst
       restartPolicy: Always
@@ -63,15 +63,15 @@ spec:
       securityContext: {}
       terminationGracePeriodSeconds: 30
       volumes:
-      - name: volume-zxz6d
+      - name: volume-d6zxz
         secret:
           defaultMode: 420
           secretName: apache2
-      - name: volume-o6yhr
+      - name: volume-rhy6o
         secret:
           defaultMode: 420
           secretName: ssl
-      - name: volume-h5z00
+      - name: volume-h5z01
         secret:
           defaultMode: 420
           secretName: app
