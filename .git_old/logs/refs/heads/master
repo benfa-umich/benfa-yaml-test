@@ -1,0 +1,4 @@
+0000000000000000000000000000000000000000 805d506393b51a40db3646ea29e1bc6dc5adcfca Ben Fairfield <benfa@umich.edu> 1531922891 -0400	clone: from https://cousinea@bitbucket.org/tlcsitsumichedu/oscpdev.git
+805d506393b51a40db3646ea29e1bc6dc5adcfca df41ea860985cadacfc131decc7ecafe27b34e1a Ben Fairfield <benfa@umich.edu> 1531926963 -0400	commit: Added subdirectory setup_files. Pushing to repo so others can access and discuss
+df41ea860985cadacfc131decc7ecafe27b34e1a 31ec71e916c5cb19632ef96bb85ec1e86d9b6509 Ben Fairfield <benfa@umich.edu> 1532009498 -0400	commit: yaml files moved to bitbucket/secrets/setup-files. Editd Dockerfile
+31ec71e916c5cb19632ef96bb85ec1e86d9b6509 662244bd511ffbfb1b007bc53596b1e0f699f2e3 Ben Fairfield <benfa@umich.edu> 1532010020 -0400	reset: moving to origin/master
