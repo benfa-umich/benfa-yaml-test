@@ -1,7 +1,7 @@
 FROM drupal7-cosign:latest
 
 #RUN mkdir -p /var/www/html/sites/default/
-#COPY html/ /var/www/html/.
+COPY html/ /var/www/html/.
 
 ### change directory owner, as openshift user is in root group.
 RUN chown -R root:root /var/lock/apache2 /usr/local/etc/php \
@@ -22,6 +22,5 @@ RUN chmod -R g+rw /etc/apache2 /etc/apache2/mods-enabled \
 RUN chmod g+x /etc/ssl/private
 
 COPY start.sh /usr/local/bin
-COPY html/index.php /var/www/html
 RUN chmod 755 /usr/local/bin/start.sh
 CMD /usr/local/bin/start.sh
