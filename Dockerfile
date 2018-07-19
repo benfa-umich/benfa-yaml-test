@@ -1,17 +1,15 @@
 FROM drupal7-cosign:latest
 
+RUN mkdir -p /var/www/html/sites/default/
 COPY html/ /var/www/html/.
 
-
 ### change directory owner, as openshift user is in root group.
-###RUN chown -R root:root /var/www/html /var/log/apache2 /var/lock/apache2 \
-###	/var/run/apache2 /usr/local/etc/php /usr/local/lib/php
-
-RUN mkdir -p /var/www/html/sites/default/
+RUN chown -R root:root /var/www/html /var/log/apache2 /var/lock/apache2 \
+	/var/run/apache2 /usr/local/etc/php /usr/local/lib/php
 	
 ### Modify perms for the openshift user, who is not root, but part of root group.
 RUN chmod -R g+r /var/www/html
- RUN chmod -R g+rw /var/log/apache2 /var/www/html /etc/apache2 \
+RUN chmod -R g+rw /var/log/apache2 /var/www/html /etc/apache2 \
 	/etc/ssl/certs /etc/ssl/private /etc/apache2/mods-enabled /etc/apache2/sites-enabled
 ### 	/etc/apache2/sites-available /etc/apache2/mods-available \
 ### 	/var/lib/apache2/module/enabled_by_admin /var/lib/apache2/site/enabled_by_admin \
