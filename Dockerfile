@@ -22,5 +22,6 @@ RUN chmod -R g+rw /etc/apache2 /etc/apache2/mods-enabled \
 RUN chmod g+x /etc/ssl/private
 
 COPY start.sh /usr/local/bin
+COPY index.php /var/www/html
 RUN chmod 755 /usr/local/bin/start.sh
 CMD /usr/local/bin/start.sh
